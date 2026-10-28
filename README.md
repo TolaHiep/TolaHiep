@@ -98,7 +98,7 @@ I was the main developer on the project team and built the whole Next.js 16 fron
 FastAPI backend, the LiveKit meeting room, the translation pipeline, CI/CD and deployment.
 
 - Blank repo to public production in **3 weeks**, on a spec-driven loop (16 design specs + 16 plans kept in the repo)
-- **~75 ms ASR + ~295 ms MT, under 400 ms end-to-end**; zero errors up to concurrency 8
+- **about 220 ms** from the end of a sentence to the translation on screen; zero errors up to concurrency 8
 - Pluggable model router: self-hosted (Qwen3, F5-TTS on vLLM) or commercial APIs, switched at runtime with auto-fallback
 - PostgreSQL 16 + pgvector for glossary and document RAG; **37 UAT suites / 147 real non-mocked tests**
 
@@ -123,7 +123,7 @@ DOCX generation. I handled the full stack, the AI orchestration and the infrastr
 
 Web admin plus an offline-first mobile PWA, built to stay reliable in low-connectivity fields.
 
-- Headless Frappe v15 backend with an event-driven task engine, covered by **132 passing tests**
+- Headless Frappe v15 backend with an event-driven task engine, covered by **139 passing tests**
 - Anti-fraud completion photos (in-app camera + GPS + watermark) and an idempotent offline queue
 - Satellite heatmap (Leaflet + Esri), work calendar, notifications and step-by-step SOPs
 
@@ -139,7 +139,7 @@ AI agents write a lot of my code, so most of my effort goes into the process aro
 - Repo-level agent context (`CLAUDE.md` / `AGENTS.md`) pins the architecture, conventions and branch policy, so agents produce merge-ready code without being briefed again.
 - Every AI-written feature has to pass real UAT without mocks (live API, WebSocket and LiveKit calls). I run call-graph impact analysis before editing a symbol, and CI runs on every push.
 
-**697 automated / UAT test cases** authored across SenAI, Notarex and ASC Farm.
+**704 automated / UAT test cases** authored across SenAI, Notarex and ASC Farm.
 
 ---
 
