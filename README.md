@@ -31,7 +31,7 @@ routing, evaluation, and latency/cost budgets.
   <img src="https://raw.githubusercontent.com/TolaHiep/portfolio/main/assets/screenshots/senai/third-prize.jpg" width="88%" alt="3rd Prize, Vietnam AI Innovation Challenge 2026">
 </p>
 <p align="center">
-  <i>3rd Prize + Vietnam AI Stars Award — Vietnam AI Innovation Challenge 2026 (AI Singapore)</i>
+  <i>3rd Prize and Vietnam AI Stars Award, Vietnam AI Innovation Challenge 2026 (AI Singapore)</i>
 </p>
 
 ## Stack
@@ -76,7 +76,7 @@ routing, evaluation, and latency/cost budgets.
 
 ## Selected work
 
-### SmartSales — sales platform for small Vietnamese shops · 2026 · *personal project, private repo*
+### SmartSales: sales platform for small Vietnamese shops · 2026 · *personal project, private repo*
 
 Zalo chat, orders, calls and livestream selling in one place, with AI that suggests replies and
 reviews calls. Built on my own, from the architecture to the UI and the AI.
@@ -87,35 +87,35 @@ reviews calls. Built on my own, from the architecture to the UI and the AI.
 - Two-channel call recording, transcribed per speaker and scored on 7 criteria for staff attitude
 - **76 test files** plus an end-to-end smoke test; two security reviews found **61 issues, all fixed**
 
-### SenAI — real-time Vietnamese↔English meeting interpreter · 2026
+### SenAI: real-time Vietnamese↔English meeting interpreter · 2026
 
 <a href="https://app.senai.online">
   <img src="https://raw.githubusercontent.com/TolaHiep/portfolio/main/assets/screenshots/senai/senai-landing.png" width="100%" alt="SenAI landing page">
 </a>
 
 Live bilingual meetings with per-speaker ASR, translation, voice cloning and automatic minutes.
-Main developer on the project team — the whole Next.js 16 frontend, most of the FastAPI backend,
-the LiveKit meeting room, the translation pipeline, CI/CD and deployment.
+I was the main developer on the project team and built the whole Next.js 16 frontend, most of the
+FastAPI backend, the LiveKit meeting room, the translation pipeline, CI/CD and deployment.
 
 - Blank repo to public production in **3 weeks**, on a spec-driven loop (16 design specs + 16 plans kept in the repo)
 - **~75 ms ASR + ~295 ms MT, under 400 ms end-to-end**; zero errors up to concurrency 8
-- Pluggable model router — self-hosted (Qwen3, F5-TTS on vLLM) or commercial APIs, switched at runtime with auto-fallback
+- Pluggable model router: self-hosted (Qwen3, F5-TTS on vLLM) or commercial APIs, switched at runtime with auto-fallback
 - PostgreSQL 16 + pgvector for glossary and document RAG; **37 UAT suites / 147 real non-mocked tests**
 
 Live at **[app.senai.online](https://app.senai.online)**
 
-### Notarex — notary document OCR & digitization · 2026 · *private repo*
+### Notarex: notary document OCR & digitization · 2026 · *private repo*
 
 <img src="https://raw.githubusercontent.com/TolaHiep/portfolio/main/assets/screenshots/Notarex/e25-admin-dashboard.png" width="100%" alt="Notarex admin dashboard">
 
 AI OCR from scanned notarial records, online editing through JWT-secured OnlyOffice, and automatic
-DOCX generation. Full-stack, AI orchestration and infrastructure.
+DOCX generation. I handled the full stack, the AI orchestration and the infrastructure.
 
 - Celery + Redis job queue with zombie-job detection and recovery under load
 - 3-role permission model scoped per notary office for tenant isolation
 - Delivered over 3.5 months, covered by **43 test modules / 418 automated test cases**
 
-### ASC Farm — agricultural production management · 2026
+### ASC Farm: agricultural production management · 2026
 
 <a href="https://github.com/TolaHiep/asc-farm">
   <img src="https://raw.githubusercontent.com/TolaHiep/portfolio/main/assets/screenshots/akf-farm/akf-farm-heatmap.png" width="100%" alt="ASC Farm satellite heatmap">
@@ -123,7 +123,7 @@ DOCX generation. Full-stack, AI orchestration and infrastructure.
 
 Web admin plus an offline-first mobile PWA, built to stay reliable in low-connectivity fields.
 
-- Headless Frappe v15 backend with an event-driven task engine — **132 passing tests**
+- Headless Frappe v15 backend with an event-driven task engine, covered by **132 passing tests**
 - Anti-fraud completion photos (in-app camera + GPS + watermark) and an idempotent offline queue
 - Satellite heatmap (Leaflet + Esri), work calendar, notifications and step-by-step SOPs
 
@@ -133,17 +133,17 @@ Code at **[github.com/TolaHiep/asc-farm](https://github.com/TolaHiep/asc-farm)**
 
 ## How I work with AI
 
-Agents write a lot of my code; the discipline is in what surrounds them.
+AI agents write a lot of my code, so most of my effort goes into the process around them.
 
-- **Spec-driven loop** — brainstorm, then a versioned design spec, an implementation plan, agent implementation, and a real test run. One canonical spec per system, never parallel versions.
-- **Context engineering** — repo-level agent context (`CLAUDE.md` / `AGENTS.md`) pinning architecture, conventions and branch policy, so agents produce merge-ready code without re-briefing.
-- **Guardrails** — every AI-written feature lands behind real no-mock UAT (live API / WebSocket / LiveKit calls), call-graph impact analysis before editing a symbol, and CI on every push.
+- Each feature goes through a brainstorm, a versioned design spec, an implementation plan, agent implementation and a real test run. Each system has one canonical spec, with no parallel versions.
+- Repo-level agent context (`CLAUDE.md` / `AGENTS.md`) pins the architecture, conventions and branch policy, so agents produce merge-ready code without being briefed again.
+- Every AI-written feature has to pass real UAT without mocks (live API, WebSocket and LiveKit calls). I run call-graph impact analysis before editing a symbol, and CI runs on every push.
 
 **697 automated / UAT test cases** authored across SenAI, Notarex and ASC Farm.
 
 ---
 
 <p align="center">
-  <b>BSc Computer Science</b> — Hanoi University of Science and Technology (HUST), 2021–2026<br>
+  <b>BSc Computer Science</b>, Hanoi University of Science and Technology (HUST), 2021-2026<br>
   <a href="https://nguyenmanhhiep.info">nguyenmanhhiep.info</a> · <a href="mailto:Hiep.work@outlook.com">Hiep.work@outlook.com</a>
 </p>
