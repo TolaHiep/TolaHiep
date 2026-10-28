@@ -14,9 +14,15 @@
 
 ---
 
-I build products end to end: UI, backend, database, deployment and testing. Recent work centres
-on real-time systems, production LLM integration and document automation — three systems carried
-from requirements through architecture, tests and live deployment in the past year.
+I am a Software Engineer specialising in full-stack web applications and AI integration. I take a
+product from the first idea to day-to-day operation: requirements, architecture, backend and
+frontend, deployment and monitoring. The systems I have built include an online meeting room with
+real-time interpretation, admin dashboards, an OCR pipeline that fills in paperwork automatically,
+and LLM features built into business workflows.
+
+When I build a system, I focus on what keeps it stable once real users arrive: clear APIs,
+consistent data, a fallback when a component fails, and automated tests reliable enough that each
+update does not break existing features.
 
 Right now I am going deeper into real-time architecture and production LLM integration: model
 routing, evaluation, and latency/cost budgets.
@@ -70,6 +76,17 @@ routing, evaluation, and latency/cost budgets.
 
 ## Selected work
 
+### SmartSales — sales platform for small Vietnamese shops · 2026 · *personal project, private repo*
+
+Zalo chat, orders, calls and livestream selling in one place, with AI that suggests replies and
+reviews calls. Built on my own, from the architecture to the UI and the AI.
+
+- 7 Node.js modules on one PostgreSQL database: each module writes only to its own schema and joins across the others, so one customer profile pulls in orders, chats and calls
+- Shared sign-in and UI frame, so a call in progress stays connected when staff switch modules
+- One AI gateway with a model per task set in `.env` and provider fallback; RAG over documents and products with vector + keyword search
+- Two-channel call recording, transcribed per speaker and scored on 7 criteria for staff attitude
+- **76 test files** plus an end-to-end smoke test; two security reviews found **61 issues, all fixed**
+
 ### SenAI — real-time Vietnamese↔English meeting interpreter · 2026
 
 <a href="https://app.senai.online">
@@ -122,7 +139,7 @@ Agents write a lot of my code; the discipline is in what surrounds them.
 - **Context engineering** — repo-level agent context (`CLAUDE.md` / `AGENTS.md`) pinning architecture, conventions and branch policy, so agents produce merge-ready code without re-briefing.
 - **Guardrails** — every AI-written feature lands behind real no-mock UAT (live API / WebSocket / LiveKit calls), call-graph impact analysis before editing a symbol, and CI on every push.
 
-**697 automated / UAT test cases** authored across the three products above.
+**697 automated / UAT test cases** authored across SenAI, Notarex and ASC Farm.
 
 ---
 
